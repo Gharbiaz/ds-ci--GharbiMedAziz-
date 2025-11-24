@@ -83,13 +83,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
 
-     steps:
+    steps:
       - name: Simulate deployment
         run: |
-          echo "==============================================="
-          echo "Simulating deployment of all services..."
-          echo "API Gateway deployed."
-          echo "Client Service deployed."
-          echo "Account Service deployed."
-          echo "All services deployed successfully!"
-          echo "==============================================="
+          echo "demployment des service."
+          echo "Deployé:"
+          echo " - $DOCKERHUB_USERNAME/$REPO_API:latest"
+          echo " - $DOCKERHUB_USERNAME/$REPO_CLIENT:latest"
+          echo " - $DOCKERHUB_USERNAME/$REPO_ACCOUNT:latest"
